@@ -1,0 +1,52 @@
+{
+  "name": "a-small-promise-queue",
+  "version": "1.0.7",
+  "description": "a small promise queue",
+  "main": "lib/a-small-promise-queue.cjs.js",
+  "module": "lib/a-small-promise-queue.esm.js",
+  "jsnext:main": "lib/a-small-promise-queue.esm.mjs",
+  "browser": "lib/a-small-promise-queue.umd.js",
+  "types": "@types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./@types/index.d.ts",
+      "import": "./lib/a-small-promise-queue.esm.mjs",
+      "require": "./lib/a-small-promise-queue.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "@types"
+  ],
+  "type": "commonjs",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/roman_123/a-small-promise-queue.git"
+  },
+  "keywords": [
+    "promise",
+    "queue",
+    "async",
+    "await"
+  ],
+  "author": "roman_123",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "rollup": "^4.37.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.2"
+  }
+}

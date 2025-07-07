@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="./lib/a-small-promise-queue.umd.js"></script>
+<script>
+function testEvent(index, time = 2000, opt) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`test ${index} done`)
+            resolve("ok")
+        }, time)
+    })
+}
+
+const q = new QueueTool.SmallPromiseQueue({
+    maxSize: 10
+})
+
+q.add((opt) => {
+    return testEvent(1, 2000, opt)
+}, {
+    isSkipError: true, // 自动跳过错误
+    timeout: 1000, // 设置超时时间为1秒
+    errorCallBack: (err) => {
+        console.log('exec error:', err)
+    },
+})
+
+q.add((opt) => {
+    return testEvent(3, 1500, opt)
+}, {
+    successCallBack: (res) => {
+        console.log('exec success:', res)
+    },
+})
+
+q.add(async (opt) => {
+    await testEvent(4, 1000, opt)
+})
+q.add(async (opt) => {
+    await testEvent(5, 1000, opt)
+})
+q.add(async (opt) => {
+    await testEvent(6, 1000, opt)
+})
+q.add(async (opt) => {
+    await testEvent(7, 1000, opt)
+})
+</script>
+</body>
+</html>
