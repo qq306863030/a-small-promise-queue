@@ -1,6 +1,6 @@
 {
   "name": "a-small-promise-queue",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "a small promise queue",
   "main": "lib/a-small-promise-queue.cjs.js",
   "module": "lib/a-small-promise-queue.esm.js",

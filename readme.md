@@ -1,7 +1,7 @@
 # a-small-promise-queue
- ![QQ](https://img.shields.io/badge/QQ-306863030-green.svg) [![Git](https://img.shields.io/badge/GIT-roman_123-blue.svg)](https://gitee.com/roman_123/a-small-promise-queue.git) [![NPM](https://img.shields.io/badge/NPM-roman_123-blue.svg)](https://www.npmjs.com/package/a-small-promise-queue)
+ ![QQ](https://img.shields.io/badge/QQ-306863030-green.svg) [![Gitee](https://img.shields.io/badge/Gitee-roman_123-blue.svg)](https://gitee.com/roman_123/a-small-promise-queue.git) [![GitHub](https://img.shields.io/badge/GitHub-roman_123-blue.svg)](https://github.com/qq306863030/a-small-promise-queue) [![NPM](https://img.shields.io/badge/NPM-roman_123-blue.svg)](https://www.npmjs.com/package/a-small-promise-queue)
 
-> a small promise queue
+> A simple queue for better control of your asynchronous events.
 
 ## Setup
 
